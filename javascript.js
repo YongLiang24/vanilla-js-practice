@@ -70,7 +70,6 @@ payCard.addEventListener("click", function(){
   
   cardSelect.appendChild(defaultOption)
   mainContent.appendChild(selectCurrency)
-  mainContent.appendChild(cardSelect)
   mainContent.appendChild(payButton) 
 })
 
