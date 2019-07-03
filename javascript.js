@@ -47,8 +47,7 @@ const payButton = document.createElement
 ("BUTTON")
 
 payButton.innerText = "Scan & Pay"
-  const defaultOption = document.createElement("OPTION")
-  defaultOption.innerText = "Default Card"
+
 
 const selectCurrency = document.createElement("SELECT")
 
@@ -67,8 +66,6 @@ payCard.addEventListener("click", function(){
   selectCurrency.appendChild(currency1)
   selectCurrency.appendChild(currency2)
   selectCurrency.appendChild(currency3)
-
-  cardSelect.appendChild(defaultOption)
   mainContent.appendChild(selectCurrency)
   mainContent.appendChild(payButton)
 })
