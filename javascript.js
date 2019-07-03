@@ -30,12 +30,9 @@ navSupport.addEventListener("click", function(){
 
   const cardForm = document.createElement("FORM")
   cardForm.method = "POST"
-  
-    const newCard = document.createElement("OPTION")
   cardForm.addEventListener("click", function(){
     event.preventDefault()
-    newCard.innerText = cardInput.value
-    // console.log(cardInput.value)
+
   })
 addCard.addEventListener("click", function(){ 
   mainContent.innerHTML =""
@@ -66,16 +63,12 @@ currency3.innerText ="Mexican Pesos"
 
 payCard.addEventListener("click", function(){
   mainContent.innerHTML = ""
- 
-  const newOption =                document.createElement("OPTION")
-  newOption.innerText = newCard.value
   
   selectCurrency.appendChild(currency1)
   selectCurrency.appendChild(currency2)
   selectCurrency.appendChild(currency3)
   
   cardSelect.appendChild(defaultOption)
-  cardSelect.appendChild(newOption)
   mainContent.appendChild(selectCurrency)
   mainContent.appendChild(cardSelect)
   mainContent.appendChild(payButton) 
