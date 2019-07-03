@@ -9,7 +9,7 @@ const homeDescription = document.createElement("P")
 homePage.addEventListener("click", function(){
   mainContent.innerHTML =""
   homeDescription.innerText = "Exchange On-Demand allows you to pay foreign currencies on demand with a simple tap"
-  
+
   mainContent.appendChild(homeDescription)
 })
 
@@ -17,13 +17,13 @@ homePage.addEventListener("click", function(){
 navSupport.addEventListener("click", function(){
   mainContent.innerHTML =""
   telSupport.innerHTML = "Call us at: 555-555-5545"
-  mainContent.appendChild(telSupport)  
+  mainContent.appendChild(telSupport)
 })
 
    const cardInput = document.createElement("INPUT")
    cardInput.type="number"
    cardInput.placeholder ="Card Number"
-  
+
     const cardButton = document.createElement("Button")
     cardButton.type="submit"
     cardButton.innerText ="Add Card"
@@ -34,7 +34,7 @@ navSupport.addEventListener("click", function(){
     event.preventDefault()
 
   })
-addCard.addEventListener("click", function(){ 
+addCard.addEventListener("click", function(){
   mainContent.innerHTML =""
   cardForm.appendChild(cardInput)
   cardForm.appendChild(cardButton)
@@ -63,13 +63,12 @@ currency3.innerText ="Mexican Pesos"
 
 payCard.addEventListener("click", function(){
   mainContent.innerHTML = ""
-  
+
   selectCurrency.appendChild(currency1)
   selectCurrency.appendChild(currency2)
   selectCurrency.appendChild(currency3)
-  
+
   cardSelect.appendChild(defaultOption)
   mainContent.appendChild(selectCurrency)
-  mainContent.appendChild(payButton) 
+  mainContent.appendChild(payButton)
 })
-
