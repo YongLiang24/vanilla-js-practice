@@ -6,6 +6,8 @@ const payCard = document.getElementById("payCard")
 const homePage = document.getElementById("homePage")
 const homeDescription = document.createElement("P")
 
+homeDescription.setAttribute("id", "homeText")
+
 homePage.addEventListener("click", function(){
   mainContent.innerHTML =""
   homeDescription.innerText = "Exchange On-Demand allows you to pay foreign currencies on demand with a simple tap"
