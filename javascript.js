@@ -1,7 +1,7 @@
-
 const navSupport = document.getElementById("supportNav")
 const mainContent = document.getElementById("mainContent")
 const addCard = document.getElementById("addCard")
+const payCard = document.getElementById("payCard")
 
 const homePage = document.getElementById("homePage")
 const homeDescription = document.createElement("P")
@@ -31,8 +31,11 @@ navSupport.addEventListener("click", function(){
   const cardForm = document.createElement("FORM")
   cardForm.method = "POST"
   
+    const newCard = document.createElement("OPTION")
   cardForm.addEventListener("click", function(){
     event.preventDefault()
+    newCard.innerText = cardInput.value
+    // console.log(cardInput.value)
   })
 addCard.addEventListener("click", function(){ 
   mainContent.innerHTML =""
@@ -40,3 +43,41 @@ addCard.addEventListener("click", function(){
   cardForm.appendChild(cardButton)
   mainContent.appendChild(cardForm)
 })
+
+const cardSelect = document.createElement("SELECT")
+
+const payButton = document.createElement
+("BUTTON")
+
+payButton.innerText = "Scan & Pay"
+  const defaultOption = document.createElement("OPTION")
+  defaultOption.innerText = "Default Card"
+
+const selectCurrency = document.createElement("SELECT")
+
+const currency1 = document.createElement("OPTION")
+currency1.innerText ="US Dollars"
+
+const currency2 = document.createElement("OPTION")
+currency2.innerText ="Japanese Yen"
+
+const currency3 = document.createElement("OPTION")
+currency3.innerText ="Mexican Pesos"
+
+payCard.addEventListener("click", function(){
+  mainContent.innerHTML = ""
+ 
+  const newOption =                document.createElement("OPTION")
+  newOption.innerText = newCard.value
+  
+  selectCurrency.appendChild(currency1)
+  selectCurrency.appendChild(currency2)
+  selectCurrency.appendChild(currency3)
+  
+  cardSelect.appendChild(defaultOption)
+  cardSelect.appendChild(newOption)
+  mainContent.appendChild(selectCurrency)
+  mainContent.appendChild(cardSelect)
+  mainContent.appendChild(payButton) 
+})
+
